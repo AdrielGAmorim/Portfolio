@@ -17,6 +17,10 @@
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+body {
+    background-color: var(--mainRed);
+}
+
 /***** Start of navbar *****/
 .navbar {
     background-color: var(--mainRed);
@@ -44,6 +48,7 @@
 
 #navbar-logo {
     background: -webkit-linear-gradient(yellow, red);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -53,6 +58,7 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2em;
+    font-weight: bold;
     z-index: 99999;
 }
 
@@ -83,6 +89,7 @@
 
 .navbar-link.active {
      background: -webkit-linear-gradient(yellow, red);
+     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -91,6 +98,7 @@
 
 .navbar-link:hover {
     background: -webkit-linear-gradient(yellow, red);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -126,22 +134,134 @@
     transition: all 0.5s ease;
 } /***** End of navbar *****/
 
-/***** Start of body *****/
+/********** START OF BODY **********/
+
+/***** Main h1 *****/
+
+.main-container h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(white, silver);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/***** Start of slider *****/
+
+.slider-container {
+    margin: 30px auto 0 auto;
+    width: 999px;
+    height: 666px;
+    overflow: hidden;
+}
+
+.slider-content {
+    width: 300%;
+    height: 666px;
+    display: flex;
+}
+
+.slider-content input {
+    display: none;
+}
+
+.slide {
+    width: 33.34%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 999px;
+}
+
+.manual-nav {
+    position: absolute;
+    width: 999px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -33.33%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -66.66%;
+}
+
+.auto-nav div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+}
+
+.auto-nav {
+    position: absolute;
+    width: 999px;
+    margin-top: 616px;
+    display: flex;
+    justify-content: center;
+}
+
+.auto-nav div:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1 {
+    background-color: white;
+}
+
+#radio2:checked ~ .auto-nav .auto-btn2 {
+    background-color: white;
+}
+
+#radio3:checked ~ .auto-nav .auto-btn3 {
+    background-color: white;
+}
 
 
+/***** End of slider *****/
 
-/***** Start of main *****/
-.main {
+/***** Start of reservation *****/
+.reservation {
     background-color: var(--mainRed);
 }
 
-.main-container {
+.reservation-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
+    height: 70vh;
     background-color: var(--mainRed);
     z-index: 1;
     width: 100%;
@@ -149,26 +269,29 @@
     padding: 0 50px;
 }
 
-.main-content h1 {
+.reservation-content h1 {
     font-size: 4em;
     background: -webkit-linear-gradient(yellow, red);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
 
-.main-content h2 {
+.reservation-content h2 {
     font-size: 3em;
     background: -webkit-linear-gradient(white, silver);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
 
-.main-content p {
+.reservation-content p {
     background: -webkit-linear-gradient(white, silver);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -178,7 +301,7 @@
     font-weight: 700;
 }
 
-.main-btn {
+.reservation-btn {
     font-size: 2em;
     background: var(--secRed);
     padding: 14px 32px;
@@ -192,14 +315,14 @@
     outline: none;
 }
 
-.main-btn a {
+.reservation-btn a {
     position: relative;
     z-index: 2;
     color: white;
     text-decoration: none;
 }
 
-.main-btn:after {
+.reservation-btn:after {
     position: absolute;
     content: '';
     top: 0;
@@ -211,52 +334,55 @@
     border-radius: 4px;
 }
 
-.main-btn:hover {
+.reservation-btn:hover {
     color: white;
 }
 
-.main-btn:hover:after {
+.reservation-btn:hover:after {
     width: 100%;
 }
 
-.main-img-container {
+.reservation-img-container {
     text-align: center;
 }
 
-#main-img {
+#reservation-img {
     height: 100%;
     width: 100%;
-} /***** End of main *****/
+} /***** End of reservation *****/
 
-/***** END OF BODY *****/
+/********** END OF BODY **********/
 
 /************************************************************************************/
 /************************************************************************************/
 /************************************************************************************/
 
-/***** START OF RESPONSIVENESS SECTION *****/
+/********** START OF RESPONSIVENESS SECTION **********/
 
-/***** SM and smaller devices *****/
+/***** SM AND SMALER DEVICES *****/
 @media screen and (max-width: 575px) {
-    .main-content h1 {
+    
+    /***** START OF RESPONSIVE RESERVATION *****/
+    .reservation-content h1 {
         font-size: 2rem;
         margin-top: 3rem;
     }
     
-    .main-content h2 {
+    .reservation-content h2 {
         font-size: 2rem;
     }
     
-    .main-content p {
+    .reservation-content p {
         font-size: 1.5rem;
         margin-top: 2rem;
     }
 
-    .main-btn {
+    .reservation-btn {
         padding: 12px 36px;
         margin: 2.5rem 0;
-    }
-} /***** End of SM and smaller devices *****/
+    } /***** END OF RESPONSIVE RESERVATION *****/
+
+} /***** END OF SM AND SMALLER DEVICES *****/
 
 /***** MD and smaller devices *****/
 @media screen and (max-width: 767px) {
@@ -361,11 +487,11 @@
     }
     /***** End of resp. navbar *****/
 
-    /***** Start of resp. body *****/
+    /***** START OF RESPONSIVE BODY *****/
 
 
-    /***** START OF RESPONSIVE CALL TO ACTION *****/
-    .main-container {
+    /***** START OF RESPONSIVE RESERVATION *****/
+    .reservation-container {
         display: grid;
         grid-template-columns: auto;
         align-items: center;
@@ -374,21 +500,21 @@
         margin: 0 auto;
         height: 90hv;
     }
-    .main-content {
+    .reservation-content {
        text-align: center;
         margin-bottom: 4rem;
     }
 
-    .main-content h1 {
+    .reservation-content h1 {
        font-size: 2.5rem;
         margin-top: 2rem;
     }
 
-    .main-content h2 {
+    .reservation-content h2 {
        font-size: 2rem;
     }
 
-    .main-content p {
+    .reservation-content p {
        font-size: 1.5rem;
        margin-top: 1rem;
     }
@@ -406,11 +532,67 @@
 }
 /***** END OF LG AND LARGER DEVICES *****/
 
+/***** MD AND SMALLER DEVICES *****/
+@media screen and (max-width: 767px) {
+
+    /***** Slider *****/
+    .slider-container {
+       width: 500px;
+       height: 333px;
+    }
+
+    .slider-content {
+       height: 333px;
+    }
+
+    .slide img {
+       width: 500px;
+    }
+
+    .manual-nav {
+      width: 500px;
+    }
+
+    .auto-nav {
+    width: 500px;
+    margin-top: 283px;
+    }
+}
+/***** END OF MD AND SMALLER DEVICES *****/
+
+/***** MD AND LG DEVICES *****/
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+    
+    /***** Slider *****/
+    .slider-container {
+       width: 700px;
+       height: 467px;
+    }
+
+    .slider-content {
+       height: 467px;
+    }
+
+    .slide img {
+       width: 700px;
+    }
+
+    .manual-nav {
+      width: 700px;
+    }
+
+    .auto-nav {
+    width: 700px;
+    margin-top: 417px;
+    }
+}
+/***** END OF MD AND LG DEVICES *****/
+
 /***** END OF RESPONSIVE BODY *****/
 
 
 
-} /***** End of MD and smaller devices *****/
+
 
 /* Between MD and LG devices */
 @media (min-width: 768px) and (max-width: 991px) {
