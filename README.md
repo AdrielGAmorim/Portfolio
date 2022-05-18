@@ -2,7 +2,7 @@
 
 Hi, Hello and welcome to my Portfolio! [UNDER CONSTRUCTION]
 
-Access https://adrielgamorim.github.io/Portfolio/ to visit the main page of my portfolio. [UNDER CONSTRUCTION]
+Access [My portfolio](https://adrielgamorim.github.io/Portfolio/) to visit the main page of my portfolio. [UNDER CONSTRUCTION]
 
 There, you'll find everything I've done organized into categories. [UNDER CONSTRUCTION]
 
