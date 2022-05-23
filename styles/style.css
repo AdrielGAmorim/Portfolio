@@ -58,7 +58,7 @@ body {
 }
 
 .portfolio-item-1 {
-    background-image: url("/images/Website1_Mini.png");
+    background-image: url("../images/Website1_Mini.png");
     padding-left: 5rem;
     padding-top: .5rem;
 
