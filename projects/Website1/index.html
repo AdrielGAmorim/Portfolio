@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!------- Start of Head ------->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/f142c87d72.js" crossorigin="anonymous"></script>
+</head> <!------- End of Head ------->
+<body> <!------- Start of Body ------->
+    <header> <!-------- Header Navbar ------->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html" id="navbar-logo">
+					<i class="fa-solid fa-hat-chef fa-2xl"></i>
+					A restaurant
+				</a>
+                <div class="navbar-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="index.html#" class="navbar-link active"> Home </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="categories.html" class="navbar-link"> Categories </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#about" class="navbar-link"> About </a>
+                    </li>
+                    <li class="navbar-btn">
+                        <a href="someForm.html" class="button"> Contact Us </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>	
+    </header> <!------- End of Header Navbar ------->
+
+    <!------- Start of slider ------->
+    <div class="main-container">
+        <h1>Take a look at our stablishment!</h1>
+    </div>
+    <div class="slider-container">
+        <div class="slider-content">
+            <!-- Radio Buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!-- Slide Images -->
+            <div class="slide first">
+                <img src="images/Slide 1.png" alt="The restaurant.">
+            </div>
+            <div class="slide">
+                <img src="images/Slide 2.png" alt="Our Burguers.">
+            </div>
+            <div class="slide">
+                <img src="images/Slide 3.png" alt="Beautiful desserts.">
+            </div>
+            <!-- Auto navigation -->
+            <div class="auto-nav">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+        <!-- Manual navigation -->
+        <div class="manual-nav">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+    <!------- End of slider ------->
+    
+    <!------- Start of Reservation section ------->
+    <div class="reservation">
+        <div class="reservation-container">
+            <div class="reservation-content">
+                <h1>A restaurant.</h1>
+                <h2>Reserve your table now!</h2>
+                <p>The best food related experience you'll ever have.</p>
+                <button class="reservation-btn"><a href="/">Reserve!</a></button>
+            </div>
+            <div class="reservation-img-container">
+                <img src="images/secRed Calendar.png" alt="The restaurant." id="reservation-img">
+            </div>
+        </div>
+    </div> <!-- End of reservation section -->
+
+    <!------- Start of Footer ------->
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="footer-links-wrapper">
+                <div class="footer-links-items">
+                    <h2 id="about">About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Meet the Chef</a>
+                    <a href="/">Investments</a>
+                </div>
+                <div class="footer-links-items">
+                    <h2 id="contact">Contact Us</h2>
+                    <a href="/">Contact</a>
+                    <a href="/">Work with us</a>
+                    <a href="/">Event Prizes</a>
+                </div>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links-items">
+                    <h2>Videos</h2>
+                    <a href="/">Submit a video</a>
+                    <a href="/">Check the videos</a>
+                    <a href="/">Influencer</a>
+                </div>
+                <div class="footer-links-items">
+                    <h2>Social Media</h2>
+                    <a href="/">Instagram</a>
+                    <a href="/">Facebook</a>
+                    <a href="/">Youtube</a>
+                    <a href="/">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-media-wrapper">
+                <div class="footer-logo">
+                    <a href="/" id="footer-logo">A Restaurant</a>
+                </div>
+                <p class="website-rights">© A Restaurant 2022. All rights reserved</p>
+                <div class="social-icons">
+                    <a href="" class="social-icon-link" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------- End of Footer ------->
+
+    <!------- Scripts ------->
+    <script src="scripts/script.js"></script>
+
+</body> <!------- Start of Body ------->
+</html>
+<!--W-->

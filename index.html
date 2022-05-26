@@ -4,24 +4,84 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Adriel Amorim's Portfolio</title>
+     <title>Website Transitions</title>
      <style>
       @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
       </style>
-     <link rel="stylesheet" href="styles/style.css">
+     <link rel="stylesheet" href="styles/home.css">
     </head>
     <body>
-      <main class="portfolio-container">
-        <img src="images/Adriel_Amorim.png" id="photo" alt="Image of Adriel Amorim">
+      <header class="header-container">
+        <div id="photo"></div>
+        <div class="header-main">
+          <div class="checkbox-container">
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="checkbox">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <div class="menu"></div>
+            <nav class="menu-items">
+              <ul>
+                <li>
+                  <a href="#" class="link">Home</a>
+                </li>
+                <li>
+                  <a href="#about" class="link">About</a>
+                </li>
+                <li>
+                  <a href="projects/index.html" class="link">Projects</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <h1>Adriel Amorim</h1>
         <h2>Systems Analyst and Developer / Web Developer</h2>
-        <div class="portfolio-content">
-          <a href="Website1/" class="portfolio-item portfolio-item-1" target="_blank">Website 1</a>
-        </div>
-        <div class="social-container">
+        <div class="social-media">
           <a href="https://linkedin.com/in/adriel-gimenes-de-amorim-78bb12191/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/AdrielGAmorim" target="_blank">GitHub</a>
+          <a href="https://github.com/AdrielGAmorim/" target="_blank">GitHub</a>
+        </div>
+      </header>
+      <main class="main-container">
+        <div class="card-container">
+          <div class="card-main"  id="about">
+            <div class="card-content">
+              <h2>About me</h2>
+              <p>A bit about me.</p>
+            </div>
+          </div>
+          <div class="card-text">
+            Hello and welcome to my personal Portfolio!<br><br>
+            My name is Adriel Gimenes de Amorim and I have a degree in Systems Analysis and Development degree since 2019.<br><br>
+            I'm highly interested in new technologies and always willing to learn more and apply my knowledge in a practical way.
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-text">
+            Click on the right and take a look at my projects, I'm always updating with new developments.
+          </div>
+          <div class="card-main" onclick="window.open('https://adrielgamorim.github.io/Portfolio/projects/index.html')">
+            <div class="card-content">
+              <h2>My Projects</h2>
+              <p>Check it out!</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-main" onclick="window.open('https://adrielgamorim.github.io/Portfolio/contact.html')">
+            <div class="card-content">
+              <h2>Contact me</h2>
+              <p>Say hello.</p>
+            </div>
+          </div>
+          <div class="card-text">
+            You'll have my LinkedIn, Email, GitHub and more. No excuses for not saying hi.
+          </div>
         </div>
       </main>
+      <footer class="footer">© 2022 All rights reserved - Adriel Amorim.</footer>
+      <script src="/scripts/script.js"></script>
     </body>
 </html>

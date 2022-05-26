@@ -1,0 +1,628 @@
+/*W*/
+
+/* Variables declaration */
+:root {
+    --mainRed: rgb(130, 20, 20); /* #821414 */
+    --secRed: rgb(170, 80, 80); /* #AA5050 */
+    /*red, yellow, white, silver, black*/
+}
+
+/***** Start of Styling *****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background-color: var(--mainRed);
+}
+
+/***** Start of navbar *****/
+.navbar {
+    background-color: var(--mainRed);
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar-logo {
+    background: -webkit-linear-gradient(yellow, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 99999;
+}
+
+.navbar-icon {
+    margin-right: 0.5rem;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar-item {
+    height: 40px;
+}
+
+.navbar-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar-link.active {
+     background: -webkit-linear-gradient(yellow, red);
+     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.navbar-link:hover {
+    background: -webkit-linear-gradient(yellow, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.navbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: var(--secRed);
+    color: white;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+    transition: all 0.5s ease;
+} /***** End of navbar *****/
+
+/********** START OF BODY **********/
+
+/***** Main h1 *****/
+
+.main-container h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(white, silver);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/***** Start of slider *****/
+
+.slider-container {
+    margin: 30px auto 0 auto;
+    width: 999px;
+    height: 666px;
+    overflow: hidden;
+}
+
+.slider-content {
+    width: 300%;
+    height: 666px;
+    display: flex;
+}
+
+.slider-content input {
+    display: none;
+}
+
+.slide {
+    width: 33.34%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 999px;
+}
+
+.manual-nav {
+    position: absolute;
+    width: 999px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -33.33%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -66.66%;
+}
+
+.auto-nav div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+}
+
+.auto-nav {
+    position: absolute;
+    width: 999px;
+    margin-top: 616px;
+    display: flex;
+    justify-content: center;
+}
+
+.auto-nav div:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1 {
+    background-color: white;
+}
+
+#radio2:checked ~ .auto-nav .auto-btn2 {
+    background-color: white;
+}
+
+#radio3:checked ~ .auto-nav .auto-btn3 {
+    background-color: white;
+}
+
+
+/***** End of slider *****/
+
+/***** Start of reservation *****/
+.reservation {
+    background-color: var(--mainRed);
+}
+
+.reservation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 70vh;
+    background-color: var(--mainRed);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.reservation-content h1 {
+    font-size: 4em;
+    background: -webkit-linear-gradient(yellow, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.reservation-content h2 {
+    font-size: 3em;
+    background: -webkit-linear-gradient(white, silver);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.reservation-content p {
+    background: -webkit-linear-gradient(white, silver);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    margin-top: 1rem;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.reservation-btn {
+    font-size: 2em;
+    background: var(--secRed);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.reservation-btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+
+.reservation-btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: -webkit-linear-gradient(yellow, red);
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.reservation-btn:hover {
+    color: white;
+}
+
+.reservation-btn:hover:after {
+    width: 100%;
+}
+
+.reservation-img-container {
+    text-align: center;
+}
+
+#reservation-img {
+    height: 100%;
+    width: 100%;
+} /***** End of reservation *****/
+
+/********** END OF BODY **********/
+
+/************************************************************************************/
+/************************************************************************************/
+/************************************************************************************/
+
+/********** START OF RESPONSIVENESS SECTION **********/
+
+/***** SM AND SMALER DEVICES *****/
+@media screen and (max-width: 575px) {
+    
+    /***** START OF RESPONSIVE RESERVATION *****/
+    .reservation-content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .reservation-content h2 {
+        font-size: 2rem;
+    }
+    
+    .reservation-content p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .reservation-btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    } /***** END OF RESPONSIVE RESERVATION *****/
+
+} /***** END OF SM AND SMALLER DEVICES *****/
+
+/***** MD and smaller devices *****/
+@media screen and (max-width: 767px) {
+
+    /***** Start of resp. navbar *****/
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar-menu.active {
+        background: var(--mainRed);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 40vh;
+        font-size: 1.6em;
+    }
+    
+    #navbar-logo {
+        padding-left: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .navbar-link {
+        font-size: 1.2em;
+        text-align: center;
+        padding: 0, 2rem, 2rem, 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar-btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 80px;
+        margin: 0;
+    }
+
+    /* Navbar toggle */
+    .navbar-toggle {
+        cursor: pointer;
+    }
+
+    .navbar-toggle .bar {
+        display: block;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /***** End of resp. navbar *****/
+
+    /***** START OF RESPONSIVE BODY *****/
+
+
+    /***** START OF RESPONSIVE RESERVATION *****/
+    .reservation-container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90hv;
+    }
+    .reservation-content {
+       text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .reservation-content h1 {
+       font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .reservation-content h2 {
+       font-size: 2rem;
+    }
+
+    .reservation-content p {
+       font-size: 1.5rem;
+       margin-top: 1rem;
+    }
+} /***** END OF MD AND SMALLER DEVICES *****/
+
+/***** MD AND LG DEVICES *****/
+@media screen and (min-width: 850px) and (max-width: 991px) {
+    
+}
+/***** END OF MD AND LG DEVICES *****/
+
+/***** LG AND LARGER DEVICES *****/
+@media screen and (min-width: 992px) {
+
+}
+/***** END OF LG AND LARGER DEVICES *****/
+
+/***** MD AND SMALLER DEVICES *****/
+@media screen and (max-width: 767px) {
+
+    /***** Slider *****/
+    .slider-container {
+       width: 500px;
+       height: 333px;
+    }
+
+    .slider-content {
+       height: 333px;
+    }
+
+    .slide img {
+       width: 500px;
+    }
+
+    .manual-nav {
+      width: 500px;
+    }
+
+    .auto-nav {
+    width: 500px;
+    margin-top: 283px;
+    }
+}
+/***** END OF MD AND SMALLER DEVICES *****/
+
+/***** MD AND LG DEVICES *****/
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+    
+    /***** Slider *****/
+    .slider-container {
+       width: 700px;
+       height: 467px;
+    }
+
+    .slider-content {
+       height: 467px;
+    }
+
+    .slide img {
+       width: 700px;
+    }
+
+    .manual-nav {
+      width: 700px;
+    }
+
+    .auto-nav {
+    width: 700px;
+    margin-top: 417px;
+    }
+}
+/***** END OF MD AND LG DEVICES *****/
+
+/***** END OF RESPONSIVE BODY *****/
+
+
+
+
+
+/* Between MD and LG devices */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Between lg and xl devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Xl and larger devices */
+@media (min-width: 1200px) {
+
+}
+
+
+
+/*// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+*/
