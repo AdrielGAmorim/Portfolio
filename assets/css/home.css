@@ -118,7 +118,7 @@ a:hover {
 .checkbox .bar {
     width: 50px;
     height: 3px;
-    background-color: var(--mainColor);
+    background-color: var(--darkColor);
     position: absolute;
     border-radius: 5px;
     transition: .5s ease-in-out;
