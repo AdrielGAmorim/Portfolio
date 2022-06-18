@@ -197,16 +197,17 @@ h1 {
     height: 200px;
     text-decoration: none;
     color: var(--mainColor);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: .3rem;
+    text-align: center;
     text-shadow: 2px 2px black;
     margin: 10px;
     border: 1px solid var(--mainColor);
     border-radius: 5px;
     display: flex;
-    opacity: .5;
-    transition: .5s ease-out;
+    opacity: .7;
+    transition: 1s ease-out;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -218,8 +219,13 @@ h1 {
 
 .portfolio-item-1 {
     background-image: url("../images/Website1_Mini.png");
-    padding-left: 5rem;
+    padding-left: 4rem;
     padding-top: .5rem;
+}
+
+.portfolio-item-2 {
+    background-color: var(--darkColor);
+    font-size: 2.2rem;
 }
 
 div.lesser-projects {
