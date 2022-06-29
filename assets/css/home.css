@@ -28,6 +28,34 @@ body {
     animation: backgroundTransition 8s ease-in-out infinite;
 }
 
+.language-wrapper {
+    position: fixed;
+    top: 18px;
+    right: 6vw;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+a#english-language {
+    width: 60px;
+    height: 60px;
+    margin: 0 8px;
+    background-image: url(../images/Usa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a#portuguese-language {
+    width: 60px;
+    height: 60px;
+    margin: 0 8px;
+    background-image: url(../images/Brazil.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 #photo {
     width: 200px;
     height: 200px;
@@ -74,7 +102,7 @@ h2 {
     transition: .5s cubic-bezier(.55, .025, .675, .97);
 }
 
-a:hover {
+.social-media a:hover {
     color: var(--darkColor);
     background-color: var(--mainColor);
 }
