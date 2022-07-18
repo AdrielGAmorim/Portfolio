@@ -185,6 +185,13 @@ h1 {
 /*---------------------------------------------------------*/
 
 /* START OF PORTFOLIO MAIN */
+
+#projects-title {
+    font-size: 3rem;
+    position: absolute;
+    top: .5vh;
+}
+
 .portfolio-content {
     width: 100%;
     margin: 30px;
@@ -204,7 +211,7 @@ h1 {
     font-weight: bold;
     letter-spacing: .3rem;
     text-align: center;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px var(--darkColor);
     margin: 10px;
     border: 1px solid var(--mainColor);
     border-radius: 5px;
@@ -217,41 +224,27 @@ h1 {
 
 .portfolio-item:hover {
     opacity: 1;
-    color: var(--mainColor);
 }
 
 .portfolio-item-1 {
     background-image: url("../images/Website1_Mini.png");
-    padding-left: 4rem;
+    padding-left: 3.5rem;
     padding-top: .5rem;
 }
 
 .portfolio-item-2 {
-    background-color: var(--darkColor);
-    font-size: 2.2rem;
-}
-
-div.lesser-projects {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: .5rem 1rem;
-    position: absolute;
-    right: 5rem;
-    bottom: 3rem;
-    border: 2px solid var(--mainColor);
-    border-radius: 10px;
-    background: -webkit-linear-gradient(white, silver);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-}
-
-div.lesser-projects:hover {
-    background-color: var(--mainColor);
+    background-image: url("../images/github_api.png");
     color: var(--darkColor);
+    text-shadow: 2px 2px var(--mainColor);
+    padding-top: 1.5rem;
 }
+
+.portfolio-item-3 {
+    background-image: url("../images/inscryption_game.png");
+    padding-top: 2.5rem;
+    font-size: 2.3rem;
+}
+
 
 /* END OF PORTFOLIO MAIN */
 
