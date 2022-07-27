@@ -31,7 +31,7 @@ body {
 .language-wrapper {
     position: fixed;
     top: 18px;
-    right: 6vw;
+    right: 10vw;
     display: flex;
     width: auto;
     height: auto;
@@ -396,6 +396,10 @@ h2 {
         margin-top: -10vh;
     }
 
+    .language-wrapper {
+        right: 15vw;
+    }
+
     .card-container {
         flex-direction: column;
     }
@@ -446,5 +450,11 @@ h2 {
     .card-main:hover > .card-content::before {
         width: 280px;
         height: 220px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .language-wrapper {
+        right: 25vw;
     }
 }
